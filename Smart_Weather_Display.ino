@@ -6,14 +6,12 @@
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 
-const char *ssid     = "AMY1";
-const char *password = "mico1889";
+const char *ssid     = "wifi";
+const char *password = "password";
 const char *api_key = "40fe2e801e7a48e0b66273e82e69e090";
-const int button = 4;
 RTC_DATA_ATTR int check = 0;
 
-String message;
-void req_api();
+void call_api();
 
 
 void setup(void) {
@@ -58,13 +56,12 @@ void setup(void) {
   esp_deep_sleep_start();
  
 }
-unsigned long oldtime;
 
 void loop() {
   
 }
 
-void req_api() {
+void call_api() {
   HTTPClient http;
   String url = "http://api.openweathermap.org/data/2.5/weather?q=Jakarta&units=metric&appid=";
   url += api_key;
