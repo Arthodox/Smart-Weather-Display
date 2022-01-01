@@ -129,10 +129,4 @@ void call_api() {
     delay(2000);
     lcd.clear(); 
   }
-
-  /*if (error) {
-    lcd.print(F("deserializeJson() failed: "));
-    lcd.print(error.c_str());
-    return;
-  }*/
 }
