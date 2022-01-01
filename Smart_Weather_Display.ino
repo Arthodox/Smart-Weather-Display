@@ -86,7 +86,7 @@ void call_api() {
 
   if(error.c_str() == "EmptyInput"){
     Serial.println(" Reinitializing JSON File");
-    req_api();
+    call_api();
   }
   else {
     lcd.clear();
